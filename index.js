@@ -136,7 +136,6 @@ function Get_Captcha(sitekey, host, n, req, agent) {
     }
 }
 const bypass = async(sitekey, host, agent) => {
-    let agent = agent// your http agent
     let req = await Get_Req(sitekey,host,agent)
     req["type"] = "hsl"
     if(!req || !["req"]) return null
